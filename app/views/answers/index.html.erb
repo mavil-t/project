@@ -1,0 +1,11 @@
+
+<h1>Answer</h1>
+<p></p>
+
+<% question=Question.find(params[:question_id]) %>
+<% answers=question.answers %>
+	<% answers.all.each do |ans| %>
+	
+			    <p class="para" id=""><%= ans.content %></p>
+			
+	<% end %>

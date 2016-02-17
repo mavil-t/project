@@ -1,0 +1,13 @@
+<h1>All Questions</h1>
+<% if @q_count!=0 %>
+<% Question.all.each do |q| %>
+<div class="row comp-padding blue-bg" >
+				<div class="page-narrow">
+					<div class="col-md-8">
+						<h2 class="media-heading"><%= q.ques_title %></h2>
+	
+	<p><%= link_to q.ques ,question_answers_path(q) %></p>
+	
+	<p>--------------</p>
+<% end %>
+<% end %>
